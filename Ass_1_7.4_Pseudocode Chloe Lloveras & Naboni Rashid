@@ -1,0 +1,39 @@
+Linear Search & Bubble Sort Pseudocode
+Chloe Lloveras and Naboni Rashid
+
+CREATE Array 
+FOR counter ← 0 TO 19
+	PRINT “Please enter a number to add to the list: ”
+	Array[counter] ← USERINPUT
+NEXT counter
+
+CREATE SearchNumber ← integer
+PRINT “Please enter a number to be searched: ”
+SearchNumber ← USERINPUT
+
+CREATE FindingFlag ← boolean
+FindingFlag ← FALSE
+FOR counter ← 0 TO 19
+	IF Array[counter] == SearchNumber THEN
+		FindingFlag ← TRUE
+	ENDIF
+NEXT counter
+
+IF FindingFlag == FALSE
+	PRINT “Not Found”
+ELSE
+	PRINT “Found”
+ENDIF
+
+FOR counter ← 0 TO 19
+	FOR counter2 ← 0 TO 18-counter
+		IF Array[counter2] > Array[counter2+1] THEN
+			SWAP (Array[counter2], Array[counter2+1])
+			SwappingFlag ← TRUE
+		ENDIF
+	NEXT counter2
+NEXT counter
+
+PRINT “Sorted list is: ”
+FOR counter = 0 TO 19
+	PRINT (Array[counter])
