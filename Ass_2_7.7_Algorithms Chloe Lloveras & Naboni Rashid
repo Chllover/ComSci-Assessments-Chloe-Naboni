@@ -1,0 +1,33 @@
+Array= []
+for counter in range(20):
+  item = int(input("Please enter a number to add to the list: "))
+  Array.append(item)
+print(Array)
+
+SearchNumber = input("Please enter a number to be searched: ")
+
+def search(Arry, l, number):
+  for counter in range(20):
+    if (Arry[counter] == number):
+      return True
+
+print("Element to be searched for is: ", SearchNumber)
+l = len(Array)
+found = False
+found = search(Array, l, SearchNumber)
+if(found == False):
+  print("Element not found")
+else:
+  print("Element is found")
+
+def bubbleSort(Arry):
+  n = len(Arry)
+  for counter in range(n):
+    for counter2 in range(0, n-counter-1):
+      if Arry[counter2] > Arry[counter2+1]:
+        Arry[counter2], Arry[counter2+1] = Arry[counter2+1], Arry[counter2]
+
+
+bubbleSort(Array)
+print("Sorted Array in Ascending Order: ")
+print (Array)
